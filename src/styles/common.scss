@@ -1,0 +1,88 @@
+@use 'font';
+
+body {
+  margin: 0;
+  padding: 5px;
+  min-height: 100vh;
+  background: rgb(39, 39, 39);
+  display: grid;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: Nunito;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: black;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+h1 {
+  padding: 0 10px;
+  margin: 1em 0;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  max-width: 800px;
+}
+
+.App {
+  background: rgb(143, 143, 180);
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.react-grid {
+  &-item {
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    &.react-grid-placeholder {
+      background: white;
+      border: none;
+    }
+    &-add {
+      font-size: 30px;
+      cursor: pointer;
+      background: none;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      &>span {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
+      }
+    }
+    &-delete {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      width: 18px;
+      height: 18px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
