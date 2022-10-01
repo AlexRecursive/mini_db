@@ -64,6 +64,7 @@ function App() {
         onDragStop={onChange}
         onResizeStop={onChange}
         measureBeforeMount={true}
+        draggableCancel=".react-grid-item-delete"
       >
         {items.map((item, key)=>{
           return item.i === 'add' ? (
